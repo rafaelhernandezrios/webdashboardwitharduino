@@ -1,0 +1,13 @@
+# No external dependencies required
+# This project uses only Python standard library
+# 
+# The server.py file uses only built-in modules:
+# - http.server
+# - socketserver
+# - os
+# - sys
+# - pathlib
+#
+# For development, you might want:
+# flask==2.3.3
+# pyserial==3.5
