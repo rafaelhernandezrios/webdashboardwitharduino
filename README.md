@@ -14,8 +14,8 @@
 
 ### 1. Clone and Run
 ```bash
-git clone <your-repo-url>
-cd arduino-web-serial-dashboard
+git clone https://github.com/rafaelhernandezrios/webdashboardwitharduino.git
+cd webdashboardwitharduino
 python server.py
 ```
 
@@ -64,8 +64,8 @@ python server.py
 ### Method 1: Python Server (Recommended)
 ```bash
 # Clone repository
-git clone <your-repo-url>
-cd arduino-web-serial-dashboard
+git clone https://github.com/rafaelhernandezrios/webdashboardwitharduino
+cd webdashboardwitharduino
 
 # Run server
 python server.py
