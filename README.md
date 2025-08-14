@@ -100,77 +100,15 @@ npx http-server -p 8000
 5. Open **Serial Monitor** and set baud rate to **115200**
 6. You should see: `{"ok":true,"msg":"Arduino simulator ready"}`
 
-#### macOS
-1. Open Arduino IDE
-2. Go to **Tools > Board** and select your Arduino board
-3. Go to **Tools > Port** and note the port (e.g., `/dev/tty.usbmodem*`)
-4. Go to **Sketch > Include Library > Manage Libraries**
-5. Search for "ArduinoJson" and install the library by Benoit Blanchon
-6. Open `arduino_simulator.ino` in Arduino IDE
-7. Click **Upload** button (→) to upload to Arduino
-8. Open **Tools > Serial Monitor** and set baud rate to 115200
-9. You should see: `{"ok":true,"msg":"Arduino simulator ready"}`
-
-#### Linux
-1. Open Arduino IDE
-2. Go to **Tools > Board** and select your Arduino board
-3. Go to **Tools > Port** and note the port (e.g., `/dev/ttyACM0`, `/dev/ttyUSB0`)
-4. Go to **Sketch > Include Library > Manage Libraries**
-5. Search for "ArduinoJson" and install the library by Benoit Blanchon
-6. Open `arduino_simulator.ino` in Arduino IDE
-7. Click **Upload** button (→) to upload to Arduino
-8. Open **Tools > Serial Monitor** and set baud rate to 115200
-9. You should see: `{"ok":true,"msg":"Arduino simulator ready"}`
-
-### Step 2: Web Server Setup
-
-#### Windows
-```bash
-# Using Python (if installed)
-python -m http.server 8000
-
-# Using Node.js (if installed)
-npx http-server -p 8000
-
-# Using Live Server extension in VS Code
-# Right-click index.html > "Open with Live Server"
-```
-
-#### macOS
-```bash
-# Using Python
-python3 -m http.server 8000
-
-# Using Node.js
-npx http-server -p 8000
-```
-
-#### Linux
-```bash
-# Using Python
-python3 -m http.server 8000
-
-# Using Node.js
-npx http-server -p 8000
-```
-
-### Step 3: Access Dashboard
-
-1. Open Chrome or Edge browser
-2. Navigate to `http://localhost:8000`
-3. You should see the Arduino Sensor Dashboard
-
-## Usage Instructions
+## 📖 Usage Instructions
 
 ### Connecting to Arduino
-
 1. **Connect Serial**: Click "Connect Serial" button
 2. **Select Port**: Choose your Arduino port from the browser dialog
 3. **Verify Connection**: Status should show "Connected to Arduino"
 4. **View Data**: Real-time sensor data will appear in the dashboard
 
 ### Using Mock Data (No Hardware Required)
-
 1. **Enable Mock Mode**: Click "Mock Data" button
 2. **View Simulated Data**: Dashboard will show simulated sensor readings
 3. **Test Features**: All dashboard features work with mock data
@@ -202,7 +140,7 @@ npx http-server -p 8000
 - **Recent Readings**: Last 10 sensor readings with timestamps
 - **Download CSV**: Export up to 1000 data points as CSV file
 
-## Arduino Commands
+## 🔧 Arduino Commands
 
 The Arduino responds to these serial commands:
 
@@ -211,7 +149,7 @@ The Arduino responds to these serial commands:
 - `PAUSE` - Pause data transmission
 - `RESUME` - Resume data transmission
 
-## Data Format
+## 📊 Data Format
 
 ### Sensor Data (Arduino → Web)
 ```json
@@ -231,7 +169,7 @@ The Arduino responds to these serial commands:
 {"ok": false, "error": "Invalid rate. Use 200-5000ms"}
 ```
 
-## Troubleshooting
+## 🛠️ Troubleshooting
 
 ### Common Issues
 
@@ -296,7 +234,7 @@ Open browser Developer Tools (F12) and check:
 
 3. **Reset Button**: Press Arduino reset button if needed
 
-## Advanced Features
+## 🚀 Advanced Features
 
 ### Custom Sampling Rates
 Send custom rate commands via browser console:
@@ -336,14 +274,14 @@ else if (command == "CUSTOM") {
 }
 ```
 
-## Security Notes
+## 🔒 Security Notes
 
 - Web Serial API requires user permission
 - Only works on localhost or HTTPS
 - No data is sent to external servers
 - All processing happens locally in browser
 
-## Browser Compatibility
+## 🌐 Browser Compatibility
 
 - **Chrome**: 89+ (Full support)
 - **Edge**: 89+ (Full support)
@@ -351,14 +289,14 @@ else if (command == "CUSTOM") {
 - **Safari**: Not supported
 - **Mobile**: Not supported
 
-## Resources
+## 📚 Resources
 
 - [Web Serial API Documentation](https://web.dev/serial/)
 - [ArduinoJson Library](https://arduinojson.org/)
 - [Chart.js Documentation](https://www.chartjs.org/)
 - [Leaflet Maps](https://leafletjs.com/)
 
-## Support
+## 💬 Support
 
 For issues or questions:
 1. Check troubleshooting section above
@@ -366,5 +304,3 @@ For issues or questions:
 3. Test with mock data first
 4. Check browser console for errors
 5. Verify Arduino code uploaded successfully
-#   w e b d a s h b o a r d w i t h a r d u i n o  
- 
